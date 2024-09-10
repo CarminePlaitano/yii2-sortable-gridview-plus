@@ -47,7 +47,6 @@ class SortableAction extends Action {
             $activeRecordClassName = $this->activeRecordClassName;
             foreach ($_POST['items'] as $i=>$item) {
                 $page = $activeRecordClassName::findOne($item);
-                //$page = $activeRecordClassName::find()->where($item);
                 $page->updateAttributes([
                     $this->orderColumn => $i + $this->startPosition,
                 ]);

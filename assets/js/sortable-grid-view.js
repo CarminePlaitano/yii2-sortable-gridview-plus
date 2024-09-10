@@ -74,6 +74,7 @@
 
 		    if(successRecordNo >= length){
 			$('#' + options.id + '-sorting-modal').modal('hide');
+			window.location.reload();
 		    }
 		}
 	    },
