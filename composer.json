@@ -1,22 +1,22 @@
 {
-	"name" : "richardfan1126/yii2-sortable-gridview",
+	"name" : "carmineplaitano/yii2-sortable-gridview",
 	"description" : "Sortable GridView for Yii2",
 	"type" : "yii2-extension",
 	"license" : "MIT",
 	"authors" : [{
-			"name" : "Richard Fan",
-			"email" : "richardfan1126@gmail.com",
-			"homepage" : "https://fancy-digital.com"
+			"name" : "Carmine Plaitano",
+			"email" : "c.plaitano@gmail.com",
+			"homepage" : "https://carmineplaitano.it"
 		}
 	],
 	"support" : {
-		"email" : "richardfan1126@gmail.com",
+		"email" : "c.plaitano@gmail.com",
 		"issues" : "https://github.com/richardfan1126/yii2-sortable-gridview/issues",
 		"wiki" : "https://github.com/richardfan1126/yii2-sortable-gridview/wiki"
 	},
 	"autoload" : {
 		"psr-4" : {
-			"richardfan\\sortable\\" : ""
+			"carmineplaitano\\sortable\\" : ""
 		}
 	},
 	"keywords" : [
