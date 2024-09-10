@@ -5,7 +5,7 @@ namespace carmineplaitano\sortable;
 use yii\web\AssetBundle;
 
 class SortableGridViewAsset extends AssetBundle {
-    public $sourcePath = '@vendor/carmineplaitano/yii2-sortable-gridview/assets';
+    public $sourcePath = '@vendor/carmineplaitano/yii2-sortable-gridview-plus/assets';
     public $baseUrl = '@web';
     public $js = [
         'js/jquery.ui.touch-punch.min.js',
