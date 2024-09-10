@@ -1,6 +1,6 @@
 {
-	"name" : "carmineplaitano/yii2-sortable-gridview",
-	"description" : "Sortable GridView for Yii2",
+	"name" : "carmineplaitano/yii2-sortable-gridview-plus",
+	"description" : "Sortable GridView for Yii2 Plus",
 	"type" : "yii2-extension",
 	"license" : "MIT",
 	"authors" : [{
