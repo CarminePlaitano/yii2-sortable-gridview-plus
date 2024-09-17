@@ -20,17 +20,12 @@
             handle: options.moveItem,
             update: function () {
                 $('#' + options.id + '-sorting-modal').modal('show');
-                //serial = $('#' + options.id + ' .sortable-grid-view tbody').sortable('toArray', {attribute:'id'});
                 serial = [];
 
 
                 $('#' + options.id + ' .sortable-grid-view tbody.ui-sortable tr').each(function () {
-                    //console.log($(this).data('key'));
                     serial.push($(this).data('key'));
                 });
-
-                //console.log(serial);
-
 
                 var length = serial.length;
                 var currentRecordNo = 0;
@@ -39,15 +34,11 @@
 
                 if (length > 0) {
                     for (var i = 0; i < length; i++) {
-                        //var itemID = regex.exec(serial[i]);
                         var itemID = serial[i];
-                        //data = data + 'items[' + i + ']=' + itemID[1] + '&';
                         data.push(itemID)
                         currentRecordNo++;
 
                         if (currentRecordNo == 500 || i == (length - 1)) {
-                            //data =  data + options.csrfTokenName + '=' + options.csrfToken;
-
                             (function (currentRecordNo) {
                                 $.ajax({
                                     'url': options.action,
@@ -56,7 +47,6 @@
                                     success: function (data) {
                                         checkSuccess(currentRecordNo);
                                         $.pjax.reload('#tableOfPartner', {timeout: false});
-									   
                                     },
                                     error: function (data) {
                                         $('#' + options.id + '-sorting-modal').modal('hide');
@@ -76,7 +66,6 @@
 
                     if (successRecordNo >= length) {
                         $('#' + options.id + '-sorting-modal').modal('hide');
-                        window.location.reload();
                     }
                 }
             },
