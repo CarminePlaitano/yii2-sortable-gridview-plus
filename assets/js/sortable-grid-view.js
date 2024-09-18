@@ -47,7 +47,10 @@
                                     success: function (data) {
                                         checkSuccess(currentRecordNo);
                                         $.pjax.reload('#tableOfPartner', {timeout: false});
-                                        $('#tableOfPartner').on('pjax:end', () => {new Event('pjaxEnd')});
+                                        $('#tableOfPartner').on('pjax:end', () => {
+                                            const event = new Event('pjaxEnd');
+                                            document.dispatchEvent(event);
+                                        });
                                     },
                                     error: function (data) {
                                         $('#' + options.id + '-sorting-modal').modal('hide');
